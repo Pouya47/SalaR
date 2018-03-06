@@ -10,6 +10,7 @@ SalaR is based on Flask (http://flask.pocoo.org/) and SB Admin 2 (https://startb
 *** ON Sender (Attacker) System ***
 
 1- Install flask by pip install Flask
+
 2- open Sender folder 
 
 3- run python reporter.py
