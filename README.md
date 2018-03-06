@@ -17,15 +17,15 @@ SalaR is based on Flask (http://flask.pocoo.org/) and SB Admin 2 (https://startb
 
 4- open http://127.0.0.1:90/ in your browser
 
-*** ON Reciver (LAN) System ***
+*** ON Receiver (LAN) System ***
 
-5- Open Reciver folder
+5- Open Receiver folder
 
-6- Start reciver by python server.py 
+6- Start reviver by python server.py 
 
 *** ON Sender (Attacker) System ***
 
-7- On the sernder web panel run tests.
+7- On the sender web panel run tests.
 
 8- use Results section for test results.
 
