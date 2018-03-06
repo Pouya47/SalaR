@@ -2,7 +2,7 @@
 A web base IPS/IDS, WAF, Firewall, ... testing framework.
 This is an Alpha release!!
 
-SalaR is based on <a href="http://flask.pocoo.org/>Flask </a> and <a href="https://startbootstrap.com/template-overviews/sb-admin-2/">SB Admin 2 </a> and <a href="https://datatables.net/">DataTables </a> on <a href="https://eric-ide.python-projects.org/">eric python</a> IDE.
+SalaR is based on <a href="http://flask.pocoo.org/">Flask </a> and <a href="https://startbootstrap.com/template-overviews/sb-admin-2/">SB Admin 2 </a> and <a href="https://datatables.net/">DataTables </a> on <a href="https://eric-ide.python-projects.org/">eric python</a> IDE.
 
 
 # Getting Start
