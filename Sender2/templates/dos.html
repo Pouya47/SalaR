@@ -1,0 +1,94 @@
+{% extends "layout.html" %}
+{% block title %}Port Scan{% endblock %}
+{% block body %}
+<!--start--- DOS section -->
+
+	<div class="row">
+                <!-- start Title -->
+                <div class="col-lg-12">
+                    <h1 class="page-header">DOS Attack</h1>
+                </div>
+                <!-- end Title -->
+        </div>
+	
+	<!--start HTTP DOS -->
+	<form name="httpdos" action="{{ url_for('runHttpDos') }}" method=post data-toggle="validator">
+	<div class="row">
+                <!-- /.col-lg-5 -->
+                <div class="col-lg-5">
+                    <div class="panel panel-warning">
+                        <div class="panel-heading">HTTP DOS</div>
+                        <div class="panel-body">
+                        <div class="input-group">
+                            <div class="input-group row" style="margin: 5px;">
+                                  <span class="input-group-addon"  id="basic-addon1"><span class="glyphicon glyphicon-eye-open"></span> Target Url: http://</span>
+                                  <input type="text" class="form-control" placeholder="Target Url like: google.com" aria-describedby="basic-addon1" name=url required="true" value="127.0.0.1">
+                                </div>
+                                <div class="input-group row" style="margin: 5px;">
+                                  <span class="input-group-addon"  id="basic-addon1"><span class="glyphicon glyphicon-fire"></span> Port:</span>
+                                  <input type="number" min="0" class="form-control" placeholder="Target port 80" aria-describedby="basic-addon1" name=port value="80" required="true">
+                                </div>      
+                                <div class="input-group row" style="margin: 5px;">
+                                  <span class="input-group-addon"  id="basic-addon1"><span class="glyphicon glyphicon-user"></span> Connection Count:</span>
+                                  <input type="number" min="1" class="form-control" placeholder="Connection Count" aria-describedby="basic-addon1" name=count value="500" required="true">
+                                </div>
+                        </div>
+                        </div>
+                        <div class="panel-footer">
+                                <input type="submit" class="form-control btn btn-success" aria-describedby="basic-addon1" value=RUN>
+                        </div>
+                    </div>
+                    
+                </div>
+	</form>
+	<!--end HTTP DOS -->
+
+    <!--start Syn Flood -->
+	<form name="httpdos" action="{{ url_for('runSynFlood') }}" method=post data-toggle="validator">
+	<div class="row">
+                <!-- /.col-lg-5 -->
+                <div class="col-lg-5">
+                    <div class="panel panel-danger">
+                        <div class="panel-heading">Syn Flood</div>
+                        <div class="panel-body">
+                        <div class="input-group">
+                            <div class="input-group row" style="margin: 5px;">
+                                <span class="input-group-addon"  id="basic-addon1"><span class="glyphicon glyphicon-eye-open"></span> Target IP:</span>
+							<input type="text" class="form-control ipv4" placeholder="Target IP Address" aria-describedby="basic-addon1" name=target required="true" value="127.0.0.1">
+                                  </div>
+                                <div class="input-group row" style="margin: 5px;">
+                                  <span class="input-group-addon"  id="basic-addon1"><span class="glyphicon glyphicon-fire"></span> Port:</span>
+                                  <input type="number" min="0" class="form-control" placeholder="Target port 80" aria-describedby="basic-addon1" name=port value="80" required="true">
+                                </div>      
+                                <div class="input-group row" style="margin: 5px;">
+                                  <span class="input-group-addon"  id="basic-addon1"><span class="glyphicon glyphicon-user"></span> Connection Count:</span>
+                                  <input type="number" min="1" class="form-control" placeholder="Connection Count" aria-describedby="basic-addon1" name=count value="500" required="true">
+                                </div>
+                        </div>
+                        </div>
+                        <div class="panel-footer">
+                                <input type="submit" class="form-control btn btn-success" aria-describedby="basic-addon1" value=RUN>
+                        </div>
+                    </div>
+                    
+                </div>
+	</form>
+	<!--end Syn Flood -->
+
+
+
+<!-- end--- DOS section -->
+
+{% endblock %}
+{% block javascript %}
+		<script src="{{ url_for('static',filename='jquery/jquery.min.js')}}"></script>
+            <script src="{{url_for('static',filename='bootstrap/js/bootstrap.min.js')}}"></script>
+            <script src="{{url_for('static',filename='metisMenu/metisMenu.min.js')}}"></script>
+            <script src="{{url_for('static',filename='dist/js/sb-admin-2.js')}}"></script>
+		<script src="{{url_for('static',filename='jquery/jquery.input-ip-address-control-1.0.min.js')}}"></script>
+<script >
+    $(document).ready(function() {  
+$('.ipv4').ipAddress();
+    });
+    </script>
+{% endblock %}

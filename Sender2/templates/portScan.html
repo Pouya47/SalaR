@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block title %}Port Scan{% endblock %}
+{% block body %}
+<form action="{{ url_for('runscan') }}" method=post data-toggle="validator">
+<div class="input-group">
+<div class="input-group row" style="margin-top: 10px;">
+  <span class="input-group-addon"  id="basic-addon1"><span class="glyphicon glyphicon-eye-open"></span> Target IP:</span>
+  <input id="ipv4" type="text" class="form-control" placeholder="Target IP Address" aria-describedby="basic-addon1" name=target required="true">
+</div>
+<div class="input-group row" style="margin-top: 10px;">
+  <span class="input-group-addon"  id="basic-addon1"><span class="glyphicon glyphicon-fire"></span> Ports:</span>
+  <input type="text" class="form-control" placeholder="Target ports 22,23" aria-describedby="basic-addon1" name=ports value="22,23,80,443,8080" required="true">
+</div>      
+<div class="input-group row" style="margin-top: 10px;">
+  <span class="input-group-addon"  id="basic-addon1"><span class="glyphicon glyphicon-plus-sign"></span> Args:</span>
+  <input type="text" class="form-control" placeholder="Nmap arguments" aria-describedby="basic-addon1" name=args>
+</div>
+<div class="input-group pull-right row" style="margin-top: 10px;">
+  <input type="submit" class="form-control btn btn-success" aria-describedby="basic-addon1" value=RUN>
+</div>
+</div>
+</form>
+{% endblock %}
+{% block javascript %}
+		<script src="{{ url_for('static',filename='jquery/jquery.min.js')}}"></script>
+            <script src="{{url_for('static',filename='bootstrap/js/bootstrap.min.js')}}"></script>
+            <script src="{{url_for('static',filename='metisMenu/metisMenu.min.js')}}"></script>
+            <script src="{{url_for('static',filename='dist/js/sb-admin-2.js')}}"></script>
+		<script src="{{url_for('static',filename='jquery/jquery.input-ip-address-control-1.0.min.js')}}"></script>
+<script>
+    $(document).ready(function() {  
+$('#ipv4').ipAddress();
+    });
+    </script>
+{% endblock %}
