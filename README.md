@@ -5,7 +5,7 @@ This is an Alpha release!!
 SalaR is based on Flask (http://flask.pocoo.org/) and SB Admin 2 (https://startbootstrap.com/template-overviews/sb-admin-2/) on eric python IDE.
 
 
-# Getting start
+# Getting Start
 
 *** ON Sender (Attacker) System ***
 
