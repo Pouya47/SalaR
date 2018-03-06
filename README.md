@@ -21,7 +21,7 @@ SalaR is based on <a href="http://flask.pocoo.org/">Flask </a> and <a href="http
 *** ON Sender (Attacker) System ***
 7- On the sender web panel run tests.
 8- use Results section for test results.
-<pre/>
+</pre>
 <br>
 # Screen Shots
 
