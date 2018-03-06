@@ -2,7 +2,8 @@
 A web base IPS/IDS, WAF, Firewall, ... testing framework.
 This is an Alpha release!!
 
-SalaR is based on Flask (http://flask.pocoo.org/) and SB Admin 2 (https://startbootstrap.com/template-overviews/sb-admin-2/).
+SalaR is based on Flask (http://flask.pocoo.org/) and SB Admin 2 (https://startbootstrap.com/template-overviews/sb-admin-2/) on eric python IDE.
+
 
 #Getting starte
 *** ON Sender (Attacker) System ***
