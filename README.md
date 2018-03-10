@@ -14,7 +14,7 @@ SalaR is based on <a href="http://flask.pocoo.org/">Flask </a> and <a href="http
 
 *** ON Receiver (LAN) System ***
 5- Open Receiver folder
-6- Start reviver by python server.py 
+6- Start receiver by python server.py 
 
 *** ON Sender (Attacker) System ***
 7- On the sender web panel run tests.
