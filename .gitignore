@@ -97,4 +97,6 @@ ENV/
 
 # mypy
 .mypy_cache/
-static/* linguist-vendored
+
+#fix worng detect project language
+Sender/static/* linguist-vendored
