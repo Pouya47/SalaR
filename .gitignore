@@ -100,3 +100,4 @@ ENV/
 
 #fix worng detect project language
 Sender/static/*.js linguist-vendored
+static/*
